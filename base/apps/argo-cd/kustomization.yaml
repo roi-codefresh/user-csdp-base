@@ -7,7 +7,7 @@ images:
 
 configMapGenerator:
   - name: conf
-    behavior: merge
+    behavior: create
     literals:
       - recaptcha.conf=|
         enabled=true

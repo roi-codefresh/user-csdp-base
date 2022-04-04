@@ -4,3 +4,12 @@ kind: Component
 images:
   - name: quay.io/codefresh/argocd
     newTag: roi-test
+
+configMapGenerator:
+  - name: conf
+    behavior: merge
+    literals:
+      - recaptcha.conf=|
+        enabled=true
+        site_key=/var/run/secrets/recaptcha/site_key.txt
+        secret_key=/var/run/secrets/recaptcha/secret_key.txt

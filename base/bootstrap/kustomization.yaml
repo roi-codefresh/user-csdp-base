@@ -4,7 +4,7 @@ resources:
   - bootstrap-app.yaml
   - https://github.com/codefresh-io/csdp-official-poc.git/csdp?ref=v0.0.306
 
-namespace: codefresh4
+namespace: argocd
 
 patches:
   - target:
@@ -13,21 +13,29 @@ patches:
       kind: ApplicationSet
     patch: |-
       - op: replace
+        path: /spec/template/metadata/namespace
+        value: argocd
+
+      - op: copy
+        from: /spec/template/metadata/namespace
         path: /spec/template/spec/destination/namespace
-        value: codefresh4
 
       - op: add
         path: /spec/generators/-
         value: {
           "git": {
             "directories": [
-              "base/apps/*"
+              { "path": "base/apps/*" }
             ],
             "repoURL": "https://github.com/roi-codefresh/user-csdp-base",
             "requeueAfterSeconds": 15,
             "template": {
+              "metadata": {},
               "spec": {
+                "destination": {},
+                "project": "",
                 "source": {
+                  "repoURL": "",
                   "kustomize": {
                     "components": [
                       "https://github.com/roi-codefresh/user-csdp-base.git/{{path}}"
@@ -38,3 +46,7 @@ patches:
             }
           }
         }
+
+      - op: copy
+        from: /spec/generators/0/git/revision
+        path: /spec/generators/2/git/revision

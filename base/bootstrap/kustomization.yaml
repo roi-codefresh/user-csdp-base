@@ -28,6 +28,7 @@ patches:
               { "path": "base/apps/*" }
             ],
             "repoURL": "https://github.com/roi-codefresh/user-csdp-base.git",
+            "revision": "HEAD",
             "requeueAfterSeconds": 15,
             "template": {
               "metadata": {},
@@ -46,7 +47,3 @@ patches:
             }
           }
         }
-
-      - op: copy
-        from: /spec/generators/0/git/revision
-        path: /spec/generators/2/git/revision

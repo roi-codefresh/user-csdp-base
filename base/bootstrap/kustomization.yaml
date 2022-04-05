@@ -27,7 +27,7 @@ patches:
             "directories": [
               { "path": "base/apps/*" }
             ],
-            "repoURL": "https://github.com/roi-codefresh/user-csdp-base",
+            "repoURL": "https://github.com/roi-codefresh/user-csdp-base.git",
             "requeueAfterSeconds": 15,
             "template": {
               "metadata": {},

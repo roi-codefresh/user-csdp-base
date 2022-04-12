@@ -5,7 +5,7 @@ generatorOptions:
   disableNameSuffixHash: true
 
 configMapGenerator:
-  - name: conf2
+  - name: conf3
     behavior: create
     literals:
       - recaptcha.conf=|

@@ -5,11 +5,11 @@ metadata:
     app.kubernetes.io/name: "csdp-bootstrap"
     codefresh.io/internal: "true"
   name: csdp-bootstrap
-  namespace: default # replaced
+  namespace: argocd # replaced
 spec:
-  project: default
+  project: csdp
   destination:
-    namespace: default # replaced
+    namespace: argocd # replaced
     server: "https://kubernetes.default.svc"
   ignoreDifferences:
     - group: argoproj.io

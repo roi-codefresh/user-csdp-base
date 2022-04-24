@@ -22,6 +22,8 @@ spec:
     path: base/bootstrap
     repoURL: https://github.com/roi-codefresh/user-csdp-base.git
     targetRevision: HEAD
+    directory:
+      exclude: bootstrap-app.yaml
   syncPolicy:
     automated:
       allowEmpty: true

@@ -6,6 +6,8 @@ metadata:
     codefresh.io/internal: "true"
   name: csdp-bootstrap
   namespace: argocd # replaced
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: csdp
   destination:

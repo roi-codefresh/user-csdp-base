@@ -31,7 +31,11 @@ patches:
             "revision": "HEAD",
             "requeueAfterSeconds": 15,
             "template": {
-              "metadata": {},
+              "metadata": {
+                "finalizers": [
+                  "resources-finalizer.argocd.argoproj.io"
+                ]
+              },
               "spec": {
                 "destination": {},
                 "project": "",
@@ -58,7 +62,7 @@ patches:
             "revision": "HEAD",
             "requeueAfterSeconds": 15,
             "template": {
-              "metadata": { "finalizers": [] },
+              "metadata": {},
               "spec": {
                 "destination": {},
                 "project": "",

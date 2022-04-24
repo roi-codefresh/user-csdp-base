@@ -47,3 +47,30 @@ patches:
             }
           }
         }
+      - op: add
+        path: /spec/generators/-
+        value: {
+          "git": {
+            "directories": [
+              { "path": "base/apps/argo-cd" }
+            ],
+            "repoURL": "https://github.com/roi-codefresh/user-csdp-base.git",
+            "revision": "HEAD",
+            "requeueAfterSeconds": 15,
+            "template": {
+              "metadata": { "finalizers": [] },
+              "spec": {
+                "destination": {},
+                "project": "",
+                "source": {
+                  "repoURL": "",
+                  "kustomize": {
+                    "components": [
+                      "https://github.com/roi-codefresh/user-csdp-base.git/{{path}}"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }

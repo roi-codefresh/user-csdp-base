@@ -4,7 +4,7 @@ resources:
   - https://github.com/codefresh-io/csdp-official-poc.git/csdp?ref=v0.0.310
   - ./codefresh-cm.yaml
 
-namespace: csdp
+namespace: daniel-g
 
 patches:
   - target:
@@ -14,7 +14,7 @@ patches:
     patch: |-
       - op: replace
         path: /spec/template/metadata/namespace
-        value: csdp
+        value: daniel-g
 
       - op: copy
         from: /spec/template/metadata/namespace
@@ -51,6 +51,7 @@ patches:
             }
           }
         }
+
       - op: add
         path: /spec/generators/-
         value: {

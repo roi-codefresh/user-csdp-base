@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  base-url: http://daniel-cf-url.ngrok.io
+  ingressClassName: ""
+  ingressController: ""
+  ingressHost: http://daniel-ingresshost.ngrok.io
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/managed-by: codefresh
+    codefresh.io/entity: runtimeDef
+  name: codefresh-cm
+  namespace: test-runtime3

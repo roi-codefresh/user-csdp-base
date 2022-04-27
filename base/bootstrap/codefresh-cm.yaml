@@ -3,7 +3,7 @@ data:
   base-url: http://daniel-cf-url.ngrok.io
   ingressClassName: ""
   ingressController: ""
-  ingressHost: http://daniel-ingresshost.ngrok.io
+  ingressHost: roi-runtime.csdp.codefresh.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null
@@ -11,4 +11,3 @@ metadata:
     app.kubernetes.io/managed-by: codefresh
     codefresh.io/entity: runtimeDef
   name: codefresh-cm
-  namespace: test-runtime3

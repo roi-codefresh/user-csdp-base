@@ -4,7 +4,7 @@ resources:
   - https://github.com/codefresh-io/csdp-official-poc.git/csdp?ref=v0.0.310
   - ./codefresh-cm.yaml
 
-namespace: daniel-g
+namespace: roi-runtime
 
 patches:
   - target:
@@ -14,7 +14,7 @@ patches:
     patch: |-
       - op: replace
         path: /spec/template/metadata/namespace
-        value: daniel-g
+        value: roi-runtime
 
       - op: copy
         from: /spec/template/metadata/namespace
